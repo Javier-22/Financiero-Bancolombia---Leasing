@@ -34,5 +34,5 @@ Wait.Time(8000);
                 Click.on(FORM_YEAR.of(fillform.get(0).getStrMount_Calendar())),
                 Click.on(FORM_YEAR.of(fillform.get(0).getStrDay_Calendar())));
     }
-    public static FillForm fill(List<DataModelOne> fillform){return  Tasks.instrumented(FillForm.class, fillform);}
+    public static FillForm creditSimulation(List<DataModelOne> fillform){return  Tasks.instrumented(FillForm.class, fillform);}
 }

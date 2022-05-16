@@ -11,7 +11,7 @@ Feature:Verify the operation of the Financial Canon simulation screen exposed
     And click the following options in order leasing, residential leasing, simulate, according to the value of the home
 
   @scenario1
-    Scenario : Verify the operation of the Financial Canon simulation screen by entering valid entries.
+    Scenario: Verify the operation of the Financial Canon simulation screen by entering valid entries.
     When when you have clicked on the option according to the value of the home, fill in the form and choose the option Housing Leasing
       |strCommercialvalue|strPercentege|strYears | strYear_Calendar| strMount_Calendar |strDay_Calendar|
       |150000000         | 80%         |   8     | 2004            |    MAR            |   22          |

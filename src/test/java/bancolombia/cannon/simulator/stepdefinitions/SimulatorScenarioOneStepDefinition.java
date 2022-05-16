@@ -32,12 +32,12 @@ public class SimulatorScenarioOneStepDefinition {
     
     @And("^click the following options in order leasing, residential leasing, simulate, according to the value of the home$")
     public void clickTheFollowingOptionsInOrderLeasingResidentialLeasingSimulateAccordingToTheValueOfTheHome() {
-        theActorInTheSpotlight().attemptsTo(ClickOptions.click());
+        theActorInTheSpotlight().attemptsTo(ClickOptions.toGetToTheForm());
     }
 
     @When("^when you have clicked on the option according to the value of the home, fill in the form and choose the option Housing Leasing$")
     public void whenYouHaveClickedOnTheOptionAccordingToTheValueOfTheHomeFillInTheFormAndChooseTheOptionHousingLeasing(List<DataModelOne>dataModelOnes) {
-        theActorInTheSpotlight().attemptsTo(FillForm.fill(dataModelOnes));
+        theActorInTheSpotlight().attemptsTo(FillForm.creditSimulation(dataModelOnes));
     }
     @Then("^Verify that when simulating your credit you get the result of the simulation$")
     public void verifyThatWhenSimulatingYourCreditYouGetTheResultOfTheSimulation() {

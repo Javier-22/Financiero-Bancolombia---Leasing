@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import static bancolombia.cannon.simulator.userinterfaces.OptionsPage.*;
 
 public class ClickOptions implements Task {
-    public static ClickOptions click(){ return Tasks.instrumented(ClickOptions.class);}
+    public static ClickOptions toGetToTheForm(){ return Tasks.instrumented(ClickOptions.class);}
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
