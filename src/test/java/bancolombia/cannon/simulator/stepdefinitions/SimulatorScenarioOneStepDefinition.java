@@ -25,16 +25,11 @@ public class SimulatorScenarioOneStepDefinition {
     public void sedStage(){
         OnStage.setTheStage(new OnlineCast());}
 
-    @Given("^that the user enters the bancolombia portal$")
-    public void ThatTheUserEntersTheBancolombiaPortal() {
-        theActorCalled("user").wasAbleTo(OpenUp.theUrl());
+    @Given("^the user opens the bancolombia portal and clicks on the different options to get to the housing credit simulation form$")
+    public void theUserOpensTheBancolombiaPortalAndClicksOnTheDifferentOptionsToGetToTheHousingCreditSimulationForm() {
+        theActorCalled("user").wasAbleTo(OpenUp.theUrl(),
+                ClickOptions.toGetToTheForm());
     }
-    
-    @And("^click the following options in order leasing, residential leasing, simulate, according to the value of the home$")
-    public void clickTheFollowingOptionsInOrderLeasingResidentialLeasingSimulateAccordingToTheValueOfTheHome() {
-        theActorInTheSpotlight().attemptsTo(ClickOptions.toGetToTheForm());
-    }
-
     @When("^when you have clicked on the option according to the value of the home, fill in the form and choose the option Housing Leasing$")
     public void whenYouHaveClickedOnTheOptionAccordingToTheValueOfTheHomeFillInTheFormAndChooseTheOptionHousingLeasing(List<DataModelOne>dataModelOnes) {
         theActorInTheSpotlight().attemptsTo(FillForm.creditSimulation(dataModelOnes));
@@ -43,5 +38,6 @@ public class SimulatorScenarioOneStepDefinition {
     public void verifyThatWhenSimulatingYourCreditYouGetTheResultOfTheSimulation() {
         theActorInTheSpotlight().should(GivenWhenThen.seeThat(CheckDisplay.result()));
     }
+
 
 }

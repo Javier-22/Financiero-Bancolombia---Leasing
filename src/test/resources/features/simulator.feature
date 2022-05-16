@@ -7,9 +7,7 @@ Feature:Verify the operation of the Financial Canon simulation screen exposed
         I want to carry out a simulation of the Housing Leasing product
         to see what data it gives me.
   Background:
-    Given  that the user enters the bancolombia portal
-    And click the following options in order leasing, residential leasing, simulate, according to the value of the home
-
+    Given  the user opens the bancolombia portal and clicks on the different options to get to the housing credit simulation form
   @scenario1
     Scenario: Verify the operation of the Financial Canon simulation screen by entering valid entries.
     When when you have clicked on the option according to the value of the home, fill in the form and choose the option Housing Leasing
